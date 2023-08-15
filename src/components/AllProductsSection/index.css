@@ -1,0 +1,116 @@
+.all-products-section {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .all-products-section {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .all-products-container {
+    margin-left: 30px;
+    width: 70%;
+  }
+}
+
+.products-heading {
+  color: #475569;
+  font-family: 'Roboto';
+  font-size: 20px;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 768px) {
+  .products-heading {
+    font-size: 32px;
+  }
+}
+
+.products-loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+@media screen and (min-width: 768px) {
+  .products-loader-container {
+    width: 70%;
+  }
+}
+
+.products-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+}
+.category-options {
+  padding: 0;
+  list-style-type: none;
+}
+.failure-view-container {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.failure-image {
+  width: 300px;
+  height: 100%;
+}
+@media screen and (min-width: 768px) {
+  .failure-image {
+    width: 350px;
+  }
+}
+.went-wrong-heading {
+  color: #0f172a;
+  font-family: 'roboto';
+  font-weight: 500;
+  text-align: center;
+  font-size: 22px;
+}
+@media screen and (min-width: 768px) {
+  .went-wrong-heading {
+    font-size: 28px;
+  }
+}
+.failure-text {
+  color: #475569;
+  text-align: center;
+  font-size: 18px;
+  font-family: 'roboto';
+}
+.no-products-container {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+}
+.no-products-heading {
+  color: #0f172a;
+  font-family: 'roboto';
+  font-weight: 500;
+  text-align: center;
+  font-size: 22px;
+}
+@media screen and (min-width: 768px) {
+  .no-products-heading {
+    font-size: 28px;
+  }
+}
+.no-products-image {
+  width: 300px;
+  height: 100%;
+}
+.no-products-text {
+  color: #475569;
+  text-align: center;
+  font-size: 18px;
+  font-family: 'roboto';
+}
