@@ -45,7 +45,7 @@ const FiltersGroup = props => {
           className={`category-option ${categoryClassName}`}
           onClick={onClickCategoryOption}
         >
-          {category.name}
+          <p>{category.name}</p>
         </li>
       )
     })

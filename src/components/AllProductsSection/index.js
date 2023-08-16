@@ -158,9 +158,21 @@ class AllProductsSection extends Component {
     const {productsList, activeOptionId} = this.state
 
     // TODO: Add No Products View
-    const shouldShowProductsList = productsList.length > 0
+    const shouldShowProductsList = productsList.length === 0
 
     return shouldShowProductsList ? (
+      <div className="no-products-container">
+        <img
+          src="https://assets.ccbp.in/frontend/react-js/nxt-trendz/nxt-trendz-no-products-view.png"
+          alt="no products"
+          className="no-products-image"
+        />
+        <h1 className="no-products-heading">No Products Found</h1>
+        <p className="no-products-text">
+          We could not find any products. Try any other filters.
+        </p>
+      </div>
+    ) : (
       <div className="all-products-container">
         <ProductsHeader
           activeOptionId={activeOptionId}
@@ -172,18 +184,6 @@ class AllProductsSection extends Component {
             <ProductCard productData={product} key={product.id} />
           ))}
         </ul>
-      </div>
-    ) : (
-      <div className="no-products-container">
-        <img
-          src="https://assets.ccbp.in/frontend/react-js/nxt-trendz/nxt-trendz-no-products-view.png"
-          alt="no products"
-          className="no-products-image"
-        />
-        <h1 className="no-products-heading">No Products Found</h1>
-        <p className="no-products-text">
-          We could not find any products. Try any other filters.
-        </p>
       </div>
     )
   }
@@ -225,8 +225,13 @@ class AllProductsSection extends Component {
   }
 
   render() {
-    const {activeCategoryId, activeRatingId, searchInput} = this.state
-
+    const {
+      activeCategoryId,
+      activeRatingId,
+      searchInput,
+      productsList,
+    } = this.state
+    console.log(productsList.length)
     return (
       <div className="all-products-section">
         {/* TODO: Update the below element */}
